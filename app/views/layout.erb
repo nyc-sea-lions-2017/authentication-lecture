@@ -18,6 +18,11 @@
   <title></title>
 </head>
 <body>
+<% if session[:id]%>
+<a href="/logout">Logout</a>
+<% else %>
+<a href="/users/new">Register</a>
+<% end %>
   <%= yield %>
 </body>
 </html>
